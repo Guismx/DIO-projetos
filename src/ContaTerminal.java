@@ -17,15 +17,11 @@ public class ContaTerminal {
         System.out.println("Por favor, digite o saldo inicial:");
         double saldo = scanner.nextDouble();
 
-       ContaBanco conta = new ContaBanco();
-        conta.numero = numero;
-        conta.agencia = agencia;
-        conta.nomeCliente = nomeCliente;
-        conta.saldo = saldo;
+        ContaBanco conta = new ContaBanco(numero, agencia, nomeCliente, saldo);
 
-        String mensagem = "Olá " + conta.nomeCliente + ", obrigado por criar uma conta em nosso banco, "
-                + "sua agência é " + conta.agencia + ", conta " + conta.numero
-                + " e seu saldo " + conta.saldo + " já está disponível para saque.";
+        String mensagem = "Olá " + conta.getNomeCliente() + ", obrigado por criar uma conta em nosso banco, "
+                + "sua agência é " + conta.getAgencia() + ", conta " + conta.getNumero()
+                + " e seu saldo " + conta.getSaldo() + " já está disponível para saque.";
 
         System.out.println(mensagem);
 
